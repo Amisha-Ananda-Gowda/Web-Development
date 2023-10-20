@@ -306,4 +306,6 @@ a.btn:nth-child(2)::before{
     top:10%;
 }
 
-.liquid-shape:nth-child
+.liquid-shape:nth-child(2){
+    filter:blur(50px)
+}
