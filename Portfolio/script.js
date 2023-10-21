@@ -38,3 +38,18 @@ currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex +1;
 
 changeText();
 setInterval(changeText,3000)
+
+const circles = document.querySelectorAll('.circle');
+circles.forEach(elem=>{
+    var dots = elem.getAttributeNS("data-dots");
+    var marked = elem.getAttributeNS("data-percent");
+    var percent = Math.floor(dots*marked/100);
+    var points="";
+    var rotate = 360 / dots;
+
+    for(let i=0;i<dots;i++)
+    {
+        points += '<div class="points" style="--i:$(i); --rot:$(rotate)deg"></div>';
+    }
+    elem.innerHTML =points;
+})
