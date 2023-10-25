@@ -7,6 +7,7 @@
 
 :root{
     --heading:#222;
+    --hover:#088178;
 }
 
 h1{
@@ -47,4 +48,184 @@ p{
 
 body{
     width:100%;
+}
+
+/* Header*/
+
+#header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+   padding:20px 80px;
+   background:#E3E6F3;
+   box-shadow:0 5px  15px rgba(0,0,0,0.06);
+   z-index:999;
+   position: sticky;
+   top:0;
+   left:0;
+}
+
+#navbar{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
+#navbar li{
+    list-style: none;
+    padding:0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size:16px;
+    font-weight:600;
+    color:#1a1a1a;
+    transition:0.3s ease;
+}
+
+
+#navbar li a:hover,
+#navbar li a.active{
+    color:var(--hover);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content:"";
+    width:30%;
+    height:2px;
+    background:var(--hover);
+    position:absolute;
+    bottom:-4px;
+    left:20px;
+}
+
+#logo{
+    text-decoration: none;
+    color:#046660;
+}
+
+/*Home*/
+#home{
+    background: url("images/fruits.jpg");
+    height: 90vh;
+    width:100%;
+    background-position: top 25% right;
+    background-size: cover;
+    padding: 0 80px;
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home h4{
+    padding-bottom:15px;
+
+}
+
+#home h1{
+    colorr:var(--hover);
+}
+
+#home button{
+    background-image: url(images/banana.jpg);
+    background-color: var(--hover);
+    border:0;
+    background-repeat: no-repeat;
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* Footer*/
+
+
+footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+footer .col{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    margin-bottom:20px;
+  
+}
+
+footer .logo{
+    margin-bottom: 30px;
+
+}
+
+footer h4{
+    font-size:14px;
+    padding-bottom:20px;
+
+}
+
+footer p{
+    font-size:13px;
+    margin: 0 0 8px 0;
+}
+
+
+footer a{
+    font-size:13px;
+    color:var(--heading);
+    text-decoration: none;
+    margin-bottom:10px;
+}
+
+footer .follow{
+    margin-top:20px;
+
+}
+
+
+footer .follow i{
+    color:#465b52;
+    padding-right:4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color:var(--hover);
+}
+
+footer .copyright{
+    width:100%;
+    text-align:center;
+}
+
+/*Media Query*/
+
+@media (max-width:799px){
+
+    #navbar{
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position:fixed;
+        top:0;
+        right:0px;
+        height:100vh;
+        width:300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
 }
