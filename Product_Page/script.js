@@ -53,6 +53,7 @@ function handle_removeCart() {
     updateTotal();
 }
 
+
 function handle_changeItemQuantity() {
     if (isNaN(this.value) || this.value < 1) {
         this.value = 1;
@@ -148,10 +149,33 @@ function attachEventListeners() {
             cart.classList.add("active");
         }
     });
+    function attachEventListeners() {
+        cartIcon.addEventListener("click", () => cart.classList.add("active"));
+        closeCart.addEventListener("click", () => cart.classList.remove("active"));
+    
+        cart.querySelector(".cart-content").addEventListener("click", function(event) {
+            if (event.target.classList.contains('cart-remove')) {
+                handle_removeCart.call(event.target, event);  // Use call to set 'this' to the clicked element
+            }
+        });
+    }
+
+    function handle_changeItemQuantity() {
+        console.log("handle_changeItemQuantity triggered");
+        console.log("New Value:", this.value);
+    
+        if (isNaN(this.value) || this.value < 1) {
+            this.value = 1;
+        }
+        this.value = Math.floor(this.value);
+        saveCartToLocalStorage();
+        updateTotal();
+    }
 
    
     document.querySelectorAll(".cart-remove").forEach(btn => btn.addEventListener("click", handle_removeCart));
     document.querySelectorAll(".cart-quantity").forEach(input => input.addEventListener("change", handle_changeItemQuantity));
+   
     document.querySelectorAll(".add-cart, .add-cart-btn").forEach(btn => btn.addEventListener("click", handle_addCartItem));
 
     const allHoverImages = document.querySelectorAll('.hover-container div img');
