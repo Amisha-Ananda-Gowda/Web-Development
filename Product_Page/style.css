@@ -128,18 +128,46 @@ body{
 }
 
 #home h1{
-    colorr:var(--hover);
+    color:var(--hover);
 }
 
 #home button{
-    background-image: url(images/banana.jpg);
+    
     background-color: var(--hover);
-    border:0;
-    background-repeat: no-repeat;
-    padding: 14px 80px 14px 65px;
+    height:50px;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+}
+
+
+
+.btn-hover {
+    width: 200px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
 
 /* Footer*/
@@ -229,3 +257,7 @@ footer .copyright{
         margin-bottom: 25px;
     }
 }
+
+
+
+
