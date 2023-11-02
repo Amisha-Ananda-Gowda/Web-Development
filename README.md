@@ -1,5 +1,3 @@
-
-https://github.com/Amisha-Ananda-Gowda/Web-Development/assets/107048204/66368be5-ff54-46d7-9705-93114ff10bf5
 ﻿# Web-Development 
 Internship at MotionCut
 
