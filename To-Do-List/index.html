@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
     <title>To-Do List Web Application</title>
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Main Container -->
     <div class="container">
+        <!-- To-Do App Container -->
         <div class="todo-app">
-            <h2>To-Do List<img src="images/notes.png"></h2> 
+            <!-- App Title and Image -->
+            <h2>To-Do List<img src="images/notes.png"></h2>
+            <!-- Task Input Row -->
             <div class="row">
-               <input type="text" id="input-box" placeholder="Enter Your Task Here"> 
-               <button onclick="addTask()" class="add">ADD</button>
+                <!-- Task Input Box -->
+                <input type="text" id="input-box" placeholder="Enter Your Task Here">
+                <!-- Add Task Button -->
+                <button onclick="addTask()" class="add">ADD</button>
             </div>
+            <!-- Task List Container -->
             <ul id="list-container">
-              
+                <!-- Task items will be dynamically added here -->
             </ul>
         </div>
     </div>
+    <!-- JavaScript Script -->
     <script src="script.js"></script>
 </body>
 </html>
