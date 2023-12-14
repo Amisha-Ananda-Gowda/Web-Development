@@ -145,3 +145,9 @@ ul li span:hover{
 .edit-button:hover{
     background-color: #f3f3f3;
 }
+
+.row{
+    align-items: center;
+    margin-left: 0;
+    padding-left: 0;
+}
